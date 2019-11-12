@@ -1198,7 +1198,7 @@ html, body {
 		content: '';
 		position: absolute;
 		width: 100%;
-		height: 40px;
+		height: 108px;
 		left: 0;
 		top: 0;
 		background: linear-gradient(180deg, #fff 0%, #F6F6F7 100%);
@@ -1209,7 +1209,7 @@ html, body {
 		content: '';
 		position: absolute;
 		width: 100%;
-		height: 40px;
+		height: 108px;
 		left: 0;
 		bottom: 0;
 		background: linear-gradient(180deg, #F6F6F7 0%, #fff 100%);
@@ -1378,7 +1378,7 @@ html, body {
 		content: '';
 		position: absolute;
 		width: 100%;
-		height: 40px;
+		height: 108px;
 		left: 0;
 		bottom: 0;
 		background: linear-gradient(180deg, #F6F6F7 0%, #fff 100%);
@@ -3767,6 +3767,16 @@ html, body {
 		padding-top: 50px;
 		padding-bottom: 50px;
 
+		&::before {
+
+			height: 50px;
+		}
+
+		&::after {
+
+			height: 50px;
+		}
+
 		.items-wrapper {
 
 			margin-top: 50px;
@@ -3775,7 +3785,13 @@ html, body {
 
 	.start-work-wrapper {
 
+		padding-top: 50px;
 		padding-bottom: 50px;
+
+		&::after {
+
+			height: 50px;
+		}
 
 		.start-work {
 
@@ -4201,6 +4217,16 @@ html, body {
 		padding-top: 30px;
 		padding-bottom: 30px;
 
+		&::before {
+
+			height: 30px;
+		}
+
+		&::after {
+
+			height: 30px;
+		}
+
 		.title {
 
 			margin-bottom: 20px;
@@ -4224,7 +4250,13 @@ html, body {
 
 	.start-work-wrapper {
 
+		padding-top: 30px;
 		padding-bottom: 30px;
+
+		&::after {
+
+			height: 30px;
+		}
 
 		.start-work {
 
