@@ -5,82 +5,89 @@ $(document).ready(function(){
 
   if (deviceType === 'Desktop' && !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
-    var scrollWidth;
+    $('.how-to-sell .items-wrapper .items .item:nth-child(even)').each(function(){
 
-    var scrollHeight = 1;
-
-    var scrollTop = 0;
-
-    var otstup;
-
-    init();
-
-    $(window).scroll(function(){
-
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      var deltaScroll = $('.how-to-sell')[0].getBoundingClientRect().top;
-
-      if (deltaScroll <= 0) {
-
-        deltaScroll = Math.abs(deltaScroll);
-
-        if (deltaScroll <= scrollWidth) {
-
-          $('.how-to-sell-fixed').css({position: 'fixed', top: otstup, bottom: 'auto', left: '0', right: 'auto', width: '100%'});
-
-          $('.items-wrapper').scrollLeft(deltaScroll);
-        }
-        else {
-
-          $('.items-wrapper').scrollLeft(scrollWidth);
-
-          $('.how-to-sell-fixed').css({position: 'absolute', top: 'auto', bottom: otstup, left: '0', right: 'auto', width: '100%'});
-        }
-      }
-      else {
-
-        $('.items-wrapper').scrollLeft(0);
-
-        $('.how-to-sell-fixed').css({position: 'relative', top: parseInt(otstup) - parseInt($('.how-to-sell').css('paddingTop')) + 'px', bottom: 'auto', left: '0', right: 'auto', width: 'auto'});
-      }
+      $(this).after('<div class="item full-width"></div>');
     });
 
-    $(window).resize(function(){
+    $('.how-to-sell .items-wrapper .items').addClass('desktop');
 
-      init();
-    });
+    // var scrollWidth;
 
-    function init() {
+    // var scrollHeight = 1;
 
-      var margin = Math.floor((document.documentElement.clientWidth - 1100) / 2);
+    // var scrollTop = 0;
 
-      if (margin < 100) {
+    // var otstup;
 
-        margin = 100;
-      }
+    // init();
 
-      $('.how-to-sell .item').eq(0).css('margin-left', margin + 'px');
+    // $(window).scroll(function(){
 
-      $('.how-to-sell .item').eq($('.how-to-sell .item').length - 1).css('margin-right', margin + 'px');
+    //   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      otstup =  Math.floor((document.documentElement.clientHeight - parseInt($('.how-to-sell-fixed').css('height'))) / 2) + 'px';
+    //   var deltaScroll = $('.how-to-sell')[0].getBoundingClientRect().top;
 
-      scrollWidth = $('.items-wrapper')[0].scrollWidth - $('.items-wrapper')[0].clientWidth;
+    //   if (deltaScroll <= 0) {
 
-      $('.how-to-sell').css('height', document.documentElement.clientHeight + scrollWidth + 'px');
+    //     deltaScroll = Math.abs(deltaScroll);
 
-      var scrollHeightNew = Math.max(
-        document.body.scrollHeight, document.documentElement.scrollHeight,
-        document.body.offsetHeight, document.documentElement.offsetHeight,
-        document.body.clientHeight, document.documentElement.clientHeight
-      ) - document.documentElement.clientHeight;
+    //     if (deltaScroll <= scrollWidth) {
 
-      scrollTop = (scrollTop / scrollHeight) * scrollHeightNew;
+    //       $('.how-to-sell-fixed').css({position: 'fixed', top: otstup, bottom: 'auto', left: '0', right: 'auto', width: '100%'});
 
-      scrollHeight = scrollHeightNew;
+    //       $('.items-wrapper').scrollLeft(deltaScroll);
+    //     }
+    //     else {
 
-      window.scrollTo(0, scrollTop);
-    }
+    //       $('.items-wrapper').scrollLeft(scrollWidth);
+
+    //       $('.how-to-sell-fixed').css({position: 'absolute', top: 'auto', bottom: otstup, left: '0', right: 'auto', width: '100%'});
+    //     }
+    //   }
+    //   else {
+
+    //     $('.items-wrapper').scrollLeft(0);
+
+    //     $('.how-to-sell-fixed').css({position: 'relative', top: parseInt(otstup) - parseInt($('.how-to-sell').css('paddingTop')) + 'px', bottom: 'auto', left: '0', right: 'auto', width: 'auto'});
+    //   }
+    // });
+
+    // $(window).resize(function(){
+
+    //   init();
+    // });
+
+    // function init() {
+
+    //   var margin = Math.floor((document.documentElement.clientWidth - 1100) / 2);
+
+    //   if (margin < 100) {
+
+    //     margin = 100;
+    //   }
+
+    //   $('.how-to-sell .item').eq(0).css('margin-left', margin + 'px');
+
+    //   $('.how-to-sell .item').eq($('.how-to-sell .item').length - 1).css('margin-right', margin + 'px');
+
+    //   otstup =  Math.floor((document.documentElement.clientHeight - parseInt($('.how-to-sell-fixed').css('height'))) / 2) + 'px';
+
+    //   scrollWidth = $('.items-wrapper')[0].scrollWidth - $('.items-wrapper')[0].clientWidth;
+
+    //   $('.how-to-sell').css('height', document.documentElement.clientHeight + scrollWidth + 'px');
+
+    //   var scrollHeightNew = Math.max(
+    //     document.body.scrollHeight, document.documentElement.scrollHeight,
+    //     document.body.offsetHeight, document.documentElement.offsetHeight,
+    //     document.body.clientHeight, document.documentElement.clientHeight
+    //   ) - document.documentElement.clientHeight;
+
+    //   scrollTop = (scrollTop / scrollHeight) * scrollHeightNew;
+
+    //   scrollHeight = scrollHeightNew;
+
+    //   window.scrollTo(0, scrollTop);
+    // }
   }
 });
