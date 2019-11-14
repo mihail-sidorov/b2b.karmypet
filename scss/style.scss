@@ -1361,6 +1361,47 @@ html, body {
 					}
 				}
 			}
+
+			&.desktop {
+
+				display: flex;
+				flex-wrap: wrap;
+
+				.item {
+
+					margin: 0;
+					flex-basis: 50%;
+					max-width: 550px;
+					margin-bottom: 60px;
+					padding-right: 15px;
+
+					&.full-width {
+
+						flex-basis: 100%;
+						max-width: none;
+					}
+
+					&:nth-child(1), &:nth-child(4) {
+
+						margin-left: auto;
+					}
+
+					&:nth-child(2), &:nth-child(5) {
+
+						margin-right: auto;
+					}
+
+					&:nth-child(3), &:nth-child(4), &:nth-child(5) {
+					
+						margin-bottom: 0;
+					}
+
+					.item-desc {
+
+						max-width: none;
+					}
+				}
+			}
 		}
 	}
 }
@@ -3780,6 +3821,30 @@ html, body {
 		.items-wrapper {
 
 			margin-top: 50px;
+
+			.items {
+
+				&.desktop {
+
+					.item {
+
+						flex-basis: 100%;
+						margin-left: auto;
+						margin-right: auto;
+						margin-bottom: 40px !important;
+
+						&:nth-child(5) {
+
+							margin-bottom: 0 !important;
+						}
+
+						&.full-width {
+
+							margin-bottom: 0 !important;
+						}
+					}
+				}
+			}
 		}
 	}
 
