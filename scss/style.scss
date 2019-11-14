@@ -1351,6 +1351,22 @@ html, body {
 						background-position: left top;
 					}
 
+					&:nth-child(3) {
+
+						&::after {
+						
+							background-image: url('../imgs/how-to-sell-icon2.svg');
+						}
+					}
+
+					&:nth-child(4) {
+
+						&::after {
+						
+							background-image: url('../imgs/how-to-sell-icon4.svg');
+						}
+					}
+
 					.item-title {
 
 						text-align: left;
