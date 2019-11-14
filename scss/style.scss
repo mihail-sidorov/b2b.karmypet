@@ -1267,20 +1267,19 @@ html, body {
 					height: 100%;
 					top: 0;
 					left: 0;
-					background-image: url('../imgs/how-to-sell-icon1.svg');
 					background-position: left -12px;
 					background-repeat: no-repeat;
 				}
 
-				&:nth-child(2) {
+				&:nth-child(1) {
 
 					&::after {
-					
-						background-image: url('../imgs/how-to-sell-icon2.svg');
+
+						background-image: url('../imgs/how-to-sell-icon1.svg');
 					}
 				}
 
-				&:nth-child(3) {
+				&:nth-child(2) {
 
 					&::after {
 					
@@ -1289,6 +1288,14 @@ html, body {
 				}
 
 				&:nth-child(4) {
+
+					&::after {
+					
+						background-image: url('../imgs/how-to-sell-icon2.svg');
+					}
+				}
+
+				&:nth-child(5) {
 
 					&::after {
 					
