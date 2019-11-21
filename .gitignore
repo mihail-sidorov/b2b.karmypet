@@ -3,3 +3,5 @@
 /css/style.css
 /.*
 !/.gitignore
+/package-lock.json
+/package.json
